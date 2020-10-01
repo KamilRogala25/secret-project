@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>( ͡° ͜ʖ ͡°) Jest godzina papieska! ( ͡° ͜ʖ ͡°)</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
-<body style="background-color:pink;">
+<body class="background">
 
 <h1 style="text-align:center;"> <span th:text="${score}"></span></h1><br>
 <div id="foto" style="text-align: center;">
-<img src="../static/gifs/papieska.gif" th:src="@{gifs/papieska.gif}" th:align="middle"/>
+<img src="../static/gifs/papieska.gif" th:src="@{gifs/papieska.gif}" th:align="middle" height="700" />
 </div>
 <div id="music" style="text-align: center">
 <audio controls="controls" autoplay="autoplay" loop="loop" preload="auto">
