@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>( ͡° ͜ʖ ͡°) Czy godzina jest papieska? ( ͡° ͜ʖ ͡°)</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/css/background.css" th:href="@{css/background.css}"/>
 </head>
 <body class="background">
-
 
 
 <h1 style="text-align:center;"> ( ͡° ͜ʖ ͡°) Sprawdź czy godzina jest papieska ( ͡° ͜ʖ ͡°)</h1>
@@ -14,7 +14,7 @@
 <h2 style="text-align:center;"> <span th:text="${score}"></span></h2>
 <h2 style="text-align:center;"> <span th:text="${howMuchLeft}"></span></h2>
 <div id="foto" style="text-align: center;">
-<img src="../static/gifs/zly.gif" th:src="@{gifs/zly.gif}" height="750"/>
+<img src="../static/gifs/zly.gif" th:src="@{gifs/zly.gif}" height="650"/>
 </div>
 <div id="music" style="text-align: center">
     <audio controls="controls" autoplay="autoplay" loop="loop" preload="metadata">
@@ -35,6 +35,5 @@
         </a>
     </p>
 </section>
-
 </body>
 </html>
