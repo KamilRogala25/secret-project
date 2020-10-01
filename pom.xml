@@ -15,7 +15,7 @@
     <description>Program do sprawdzania czy jest 21:37</description>
 
     <properties>
-        <java.version>14</java.version>
+            <java.version>14</java.version>
     </properties>
 
     <dependencies>
@@ -71,7 +71,9 @@
                     <execution>
                         <id>copy-dependencies</id>
                         <phase>package</phase>
-                        <goals><goal>copy-dependencies</goal></goals>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>

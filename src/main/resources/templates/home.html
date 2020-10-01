@@ -5,6 +5,8 @@
     <title>( ͡° ͜ʖ ͡°) Czy godzina jest papieska? ( ͡° ͜ʖ ͡°)</title>
 </head>
 <body style="background-color:pink;">
+
+
 <h1 style="text-align:center;"> ( ͡° ͜ʖ ͡°) Sprawdź czy godzina jest papieska ( ͡° ͜ʖ ͡°)</h1>
 <h2 style="text-align:center;"> Obecnie jest godzina <span th:text="${actualTime}"></span>.</h2>
 <h2 style="text-align:center;"> <span th:text="${score}"></span></h2>
@@ -12,6 +14,16 @@
 <div id="foto" style="text-align: center;">
 <img src="../static/gifs/zly.gif" th:src="@{gifs/zly.gif}"/>
 </div>
+<div id="music" style="text-align: center">
+    <audio controls="controls" autoplay="autoplay" loop="loop" preload="metadata">
+            <source src="../static/music/niepapieska.mp3" th:src="@{music/niepapieska.mp3}" id="my_audio"  type="audio/mpeg">
+
+    </audio>
+
+</div>
+
+
+
 <section style="position: absolute; bottom: 5px; right: 25px;">
     <p>
         Sprawdź inne moje projekty
