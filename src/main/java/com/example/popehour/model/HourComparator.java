@@ -27,6 +27,13 @@ public abstract class HourComparator {
         String[] target = HourComparator.getTargetTime().split(":");
         int hoursDiff = Integer.parseInt(target[0]) - Integer.parseInt(actual[0]);
         int minutesDiff = Integer.parseInt(target[1]) - Integer.parseInt(actual[1]);
+        if (hoursDiff == 0 && minutesDiff > 0) {
+            return "Do godziny papieskiej zostało " + minutesDiff + " minut.";
+        }
+        if (hoursDiff == 0 && minutesDiff < 0) {
+            minutesDiff *=-1;
+            return "Do godziny papieskiej zostało 23 godzin i " + minutesDiff + " minut.";
+        }
         if (hoursDiff > 0 && minutesDiff > 0) {
             return "Do godziny papieskiej zostało " + hoursDiff + " godzin i " + minutesDiff + " minut.";
         }

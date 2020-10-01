@@ -32,6 +32,10 @@ public class HomeController {
         return "home";
     }
 
+// todo przetestuj to wpisując czas
+//    @GetMapping("/{time}")
+//    public String testTime
+
     @GetMapping("/2137")
     public String getPopeHour(ModelMap map) {
         map.put("score", "Jest godzina papieska, jedzcie kremówki XD");
