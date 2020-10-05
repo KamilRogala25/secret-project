@@ -46,12 +46,12 @@ public abstract class HourComparator {
             return "Do godziny papieskiej zostało " + hoursDiff + " godzin i " + minutesDiff + " minut.";
         }
         if (hoursDiff > 0 && minutesDiff < 0) {
-            minutesDiff = (minutesDiff * -1) + 37;
+            minutesDiff += 60;
             return "Do godziny papieskiej zostało " + hoursDiff + " godzin i " + minutesDiff + " minut.";
         }
         if (hoursDiff < 0 && minutesDiff < 0) {
             hoursDiff += 24;
-            minutesDiff = (minutesDiff * -1) + 37;
+            minutesDiff += 60;
             return "Do godziny papieskiej zostało " + hoursDiff + " godzin i " + minutesDiff + " minut.";
         }
         return "0";
@@ -87,12 +87,12 @@ public abstract class HourComparator {
             return hoursDiff + ":" + minutesDiff;
         }
         if (hoursDiff > 0 && minutesDiff < 0) {
-            minutesDiff = (minutesDiff * -1) + 37;
+            minutesDiff += 60;
             return hoursDiff + ":" + minutesDiff;
         }
         if (hoursDiff < 0 && minutesDiff < 0) {
             hoursDiff += 24;
-            minutesDiff = (minutesDiff * -1) + 37;
+            minutesDiff += 60;
             return hoursDiff + ":" + minutesDiff;
         }
         return "0";

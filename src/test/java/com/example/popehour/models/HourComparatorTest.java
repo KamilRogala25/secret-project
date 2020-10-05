@@ -18,6 +18,7 @@ public class HourComparatorTest {
         assertEquals(HourComparator.howMuchLeftTest(21,38),"23:59");
         assertEquals(HourComparator.howMuchLeftTest(20,51),"1:46");
         assertEquals(HourComparator.howMuchLeftTest(23,9),"22:28");
+        assertEquals(HourComparator.howMuchLeftTest(23,41),"22:56");
     }
 
 
