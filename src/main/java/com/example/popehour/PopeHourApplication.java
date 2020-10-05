@@ -1,5 +1,6 @@
 package com.example.popehour;
 
+import com.example.popehour.controller.HomeController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,7 @@ public class PopeHourApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(PopeHourApplication.class, args);
+
     }
 
 

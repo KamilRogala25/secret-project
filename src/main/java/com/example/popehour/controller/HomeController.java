@@ -23,12 +23,11 @@ public class HomeController {
             @Override
             public void run() {
                 map.replace("actualTime",HourComparator.updateActualTime());
+//                System.out.println(HourComparator.updateActualTime());
                 map.replace("howMuchLeft", HourComparator.updateDifference());
+//                System.out.println(HourComparator.updateDifference());
             }
         },0,1000);
-
-
-
         if (map.get("actualTime").equals(map.get("targetTime"))) {
             map.put("score", "Jest godzina papieska, jedzcie kremówki XD");
             Gif gif = Gif.GIFS.get(0);

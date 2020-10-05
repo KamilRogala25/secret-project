@@ -6,14 +6,21 @@
     <meta http-equiv="refresh" content="60">
     <title>( ͡° ͜ʖ ͡°) Czy godzina jest papieska? ( ͡° ͜ʖ ͡°)</title>
     <link rel="stylesheet" href="../static/css/background.css" th:href="@{css/background.css}"/>
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript">
+            setInterval("my_function();",5000);
+        function my_function(){
+            $('#refresh').load(location.href + ' #time');
+        }
+    </script>
 </head>
 <body class="background">
 
-
+<div id="refresh">
 <h1 style="text-align:center;"> ( ͡° ͜ʖ ͡°) Sprawdź czy godzina jest papieska ( ͡° ͜ʖ ͡°)</h1>
 <h2 style="text-align:center;"> Obecnie jest godzina <span th:text="${actualTime}"></span>.</h2>
 <h2 style="text-align:center;"> <span th:text="${score}"></span></h2>
 <h2 style="text-align:center;"> <span th:text="${howMuchLeft}"></span></h2>
+</div>
 <div id="foto" style="text-align: center;">
 <img src="../static/gifs/zly.gif" th:src="@{gifs/zly.gif}" height="650"/>
 </div>

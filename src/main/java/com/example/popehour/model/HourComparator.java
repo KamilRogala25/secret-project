@@ -12,11 +12,7 @@ public abstract class HourComparator {
 
     private static final String targetTime = "21:37";
 
-    public static boolean compareHours() {
-        if (actualTime.equalsIgnoreCase(targetTime)) {
-            return true;
-        } else return false;
-    }
+
 
     public static String howMuchLeft() {
         updateActualTime();
@@ -28,21 +24,25 @@ public abstract class HourComparator {
             return "Do godziny papieskiej zostało " + minutesDiff + " minut.";
         }
         if (hoursDiff == 0 && minutesDiff < 0) {
-            minutesDiff *= -1;
+            minutesDiff += 60;
             return "Do godziny papieskiej zostało 23 godzin i " + minutesDiff + " minut.";
+        }
+        if (hoursDiff == 1 && minutesDiff <0){
+            minutesDiff += 60;
+            return "Do godziny papieskiej zostało 1 godzina i" + minutesDiff + "minut";
         }
         if (hoursDiff > 0 && minutesDiff == 0) {
             return "Do godziny papieskiej zostało " + hoursDiff + " minut.";
         }
         if (hoursDiff < 0 && minutesDiff == 0) {
-            hoursDiff *= -1;
+            hoursDiff += 24;
             return "Do godziny papieskiej zostało " + hoursDiff + " minut.";
         }
         if (hoursDiff > 0 && minutesDiff > 0) {
             return "Do godziny papieskiej zostało " + hoursDiff + " godzin i " + minutesDiff + " minut.";
         }
         if (hoursDiff < 0 && minutesDiff > 0) {
-            hoursDiff *= -1;
+            hoursDiff += 24;
             return "Do godziny papieskiej zostało " + hoursDiff + " godzin i " + minutesDiff + " minut.";
         }
         if (hoursDiff > 0 && minutesDiff < 0) {
@@ -50,7 +50,7 @@ public abstract class HourComparator {
             return "Do godziny papieskiej zostało " + hoursDiff + " godzin i " + minutesDiff + " minut.";
         }
         if (hoursDiff < 0 && minutesDiff < 0) {
-            hoursDiff *= -1;
+            hoursDiff += 24;
             minutesDiff = (minutesDiff * -1) + 37;
             return "Do godziny papieskiej zostało " + hoursDiff + " godzin i " + minutesDiff + " minut.";
         }
