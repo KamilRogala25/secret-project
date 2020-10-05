@@ -103,9 +103,13 @@ public abstract class HourComparator {
         return actualTime;
     }
 
-    @Scheduled(fixedRateString = "1000")
-    public static void updateActualTime() {
-        actualTime = getActualTime();
+
+    public static String updateActualTime() {
+        return actualTime = getActualTime();
+    }
+
+    public static String updateDifference() {
+        return howMuchLeft();
     }
 
     public static String getTargetTime() {
